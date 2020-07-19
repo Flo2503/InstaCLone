@@ -13,6 +13,8 @@
 		5C8C2CB324C44BB10080677B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C8C2CB224C44BB10080677B /* Assets.xcassets */; };
 		5C8C2CB624C44BB10080677B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C8C2CB524C44BB10080677B /* Preview Assets.xcassets */; };
 		5C8C2CB924C44BB10080677B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C8C2CB724C44BB10080677B /* LaunchScreen.storyboard */; };
+		5C8C2CC324C44E850080677B /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8C2CC124C44E850080677B /* Post.swift */; };
+		5C8C2CC424C44E850080677B /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8C2CC224C44E850080677B /* Author.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		5C8C2CB524C44BB10080677B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5C8C2CB824C44BB10080677B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C8C2CBA24C44BB10080677B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C8C2CC124C44E850080677B /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Post.swift; path = "../../../../Downloads/InstagramClone-main/InstagramClone/Post.swift"; sourceTree = "<group>"; };
+		5C8C2CC224C44E850080677B /* Author.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Author.swift; path = "../../../../Downloads/InstagramClone-main/InstagramClone/Author.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		5C8C2CAB24C44BAE0080677B /* InstaClone */ = {
 			isa = PBXGroup;
 			children = (
+				5C8C2CC024C44E670080677B /* Models */,
 				5C8C2CAC24C44BAE0080677B /* AppDelegate.swift */,
 				5C8C2CAE24C44BAE0080677B /* SceneDelegate.swift */,
 				5C8C2CB024C44BAE0080677B /* ContentView.swift */,
@@ -73,6 +78,15 @@
 				5C8C2CB524C44BB10080677B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5C8C2CC024C44E670080677B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5C8C2CC224C44E850080677B /* Author.swift */,
+				5C8C2CC124C44E850080677B /* Post.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +163,8 @@
 				5C8C2CAD24C44BAE0080677B /* AppDelegate.swift in Sources */,
 				5C8C2CAF24C44BAE0080677B /* SceneDelegate.swift in Sources */,
 				5C8C2CB124C44BAE0080677B /* ContentView.swift in Sources */,
+				5C8C2CC324C44E850080677B /* Post.swift in Sources */,
+				5C8C2CC424C44E850080677B /* Author.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
