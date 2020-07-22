@@ -37,20 +37,39 @@ struct HomeView: View {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 20) {
                         ForEach(Author.all) { author in
-                            VStack {
-                                Image(author.photoName)
-                                .resizable()
-                                .frame(width: 70, height: 70)
-                                .scaledToFit()
-                                .clipShape(Circle())
-                                .overlay(
-                                    Circle().stroke(Color.red, style: StrokeStyle(lineWidth: 2))
-                                .frame(width: 75, height: 77)
-                                )
-                            }
+                            StoriesView(author: author)
                         }
                     } .padding(.all, 10)
                 }
+                Divider()
+                
+                ForEach(Post.all) { post in
+                    VStack(alignment: .leading, spacing: 0) {
+                        StoriesView(author: post.author, width: 40, showText: false)
+                    }
+                }
+            }
+        }
+    }
+}
+
+struct StoriesView: View {
+    let author: Author
+    var width: CGFloat = 70
+    var showText = true
+    var body: some View {
+        VStack {
+            Image(author.photoName)
+                .resizable()
+                .frame(width: width, height: width)
+                .scaledToFit()
+                .clipShape(Circle())
+                .overlay(
+                    Circle().stroke(Color.red, style: StrokeStyle(lineWidth: 2))
+                        .frame(width: width + 5, height: width + 5)
+            )
+            if showText {
+                Text(author.name)
             }
         }
     }
