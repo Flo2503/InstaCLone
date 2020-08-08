@@ -20,6 +20,7 @@ struct ContentView: View {
             .tabItem {
                 Image(systemName: "house.fill")
                 .font(.system(size: 20))
+                .accentColor(.black)
             }
             
             Text("Search")
@@ -45,7 +46,7 @@ struct ContentView: View {
                     Image(systemName: "person.fill")
                         .font(.system(size: 20))
             }
-        }
+        }.accentColor(.black)
     }
 }
 
