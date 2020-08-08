@@ -45,7 +45,6 @@
 			isa = PBXGroup;
 			children = (
 				5C8C2CAB24C44BAE0080677B /* InstaClone */,
-				5C8C2CAA24C44BAE0080677B /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,6 +54,7 @@
 				5C8C2CA924C44BAE0080677B /* InstaClone.app */,
 			);
 			name = Products;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		5C8C2CAB24C44BAE0080677B /* InstaClone */ = {
@@ -75,6 +75,7 @@
 		5C8C2CB424C44BB10080677B /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				5C8C2CAA24C44BAE0080677B /* Products */,
 				5C8C2CB524C44BB10080677B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";

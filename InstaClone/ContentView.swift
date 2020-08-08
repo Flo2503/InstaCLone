@@ -31,6 +31,13 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 struct HomeView: View {
+    var relativeFormatter: RelativeDateTimeFormatter {
+        let formatter = RelativeDateTimeFormatter()
+        formatter.unitsStyle = .full
+        formatter.locale = Locale(identifier: "fr_FR")
+        return formatter
+    }
+    
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 0) {
@@ -45,8 +52,59 @@ struct HomeView: View {
                 
                 ForEach(Post.all) { post in
                     VStack(alignment: .leading, spacing: 0) {
-                        StoriesView(author: post.author, width: 40, showText: false)
+                        HStack {
+                           StoriesView(author: post.author, width: 40, showText: false)
+                            VStack(alignment: .leading) {
+                                Text(post.author.name)
+                                Text("Paris")
+                           }
+                            
+                            Spacer()
+                            Image(systemName: "ellipsis")
+                        }.padding(.all, 10)
+                        
+                        Divider()
+                        Image(post.imageName)
+                        .resizable()
+                        .scaledToFit()
+                        
+                        HStack(spacing: 20) {
+                            Button(action: {}, label: { Image(systemName: "heart")
+                                .font(.title)
+                                }).buttonStyle(PlainButtonStyle())
+                            
+                            Button(action: {}, label: { Image("circlebubble")
+                                .resizable()
+                                .frame(width: 28, height: 28)
+                                .font(.title)
+                            }).buttonStyle(PlainButtonStyle())
+                            
+                            Button(action: {}, label: { Image(systemName: "paperplane")
+                            .font(.title)
+                            }).buttonStyle(PlainButtonStyle())
+                            Spacer()
+                             
+                            Button(action: {}, label: { Image(systemName: "bookmark")
+                            .font(.title)
+                            }).buttonStyle(PlainButtonStyle())
+                        }.padding(.all, 10)
                     }
+                    
+                    VStack(alignment: .leading) {
+                        Button(action: {}, label: { Text("Voir les J'aime")
+                        .font(.headline)
+                        }).buttonStyle(PlainButtonStyle())
+                        
+                        HStack(alignment: .top) {
+                            Text(post.author.name)
+                                .font(.headline)
+                            Text(post.comment)
+                            .lineLimit(nil)
+                        }
+                        
+                        Text(self.relativeFormatter.localizedString(for: post.creationDate, relativeTo: Date()))
+                        
+                    }.padding(.horizontal)
                 }
             }
         }
