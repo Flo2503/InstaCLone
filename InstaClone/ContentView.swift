@@ -19,6 +19,31 @@ struct ContentView: View {
             }
             .tabItem {
                 Image(systemName: "house.fill")
+                .font(.system(size: 20))
+            }
+            
+            Text("Search")
+                .tabItem {
+                    Image(systemName: "magnifyingglass")
+                        .font(.system(size: 20))
+            }
+            
+            Text("Add")
+                .tabItem {
+                    Image(systemName: "plus.app")
+                        .font(.system(size: 20))
+            }
+            
+            Text("Heart")
+                .tabItem {
+                    Image(systemName: "heart.fill")
+                        .font(.system(size: 20))
+            }
+            
+            Text("Profil")
+                .tabItem {
+                    Image(systemName: "person.fill")
+                        .font(.system(size: 20))
             }
         }
     }
